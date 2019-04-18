@@ -12,19 +12,19 @@
             <div id="form-wrapper">
               <form id="survey-form">
                 <div class="labels">
-                  <label for="name">* Name:</label>
+                  <label for="name" id="name-label">* Name:</label>
                 </div>
                 <div class="right-half">
-                  <input id="name" type="text" placeholder="Enter your name" required>
+                  <input type="text" id="name" placeholder="Enter your name" required>
                 </div>
                 <div class="labels">
-                  <label for="email">* Email:</label>
+                  <label for="email" id="email-label">* Email:</label>
                 </div>
                 <div class="right-half">
-                  <input type="text" id="email" class="input-field" placeholder="Enter your email" required>
+                  <input type="email" id="email" class="input-field" placeholder="Enter your email" required>
                 </div>
                 <div class="labels">
-                    <label for="age">* Age:</label>
+                    <label for="age" id="number-label">* Age:</label>
                 </div>
                 <div class="right-half">
                     <input type="number" name="age" id="number" min="1" max="115" class="input-field" placeholder="Age" required>
@@ -50,7 +50,48 @@
                     <input type="radio" name="recommend" id="definitely" value="definitely">
                     <label for="definitely">Definitely</label><br>
                     <input type="radio" name="recommend" id="maybe" value="maybe">
-                    <label for="maybe">Maybe</label>
+                    <label for="maybe">Maybe</label><br>
+                    <input type="radio" name="recommend" id="not-sure" value="not-sure">
+                    <label for="not-sure">Not Sure</label>
+                </div>
+                <div class="labels">
+                    <label for="like-most">What do you like most in FCC:</label>
+                </div>
+                <div class="right-half">
+                    <select id="dropdown2" name="like-most">
+                        <!-- Challenges, Projects, Community, Open Source -->
+                        <option value="select-one" disabled selected>Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="open-source">Open Source</option>
+                    </select>
+                </div>
+                <div class="labels">
+                    <label for="improvements">Things that should be improved in the future<br>
+                    (Check all that apply):</label>
+                </div>
+                <div class="right-half">
+                    <input type="checkbox" name="improvements" value="front-end">Front-end Projects<br>
+                    <input type="checkbox" name="improvements" value="back-end">Back-end Projects<br>
+                    <input type="checkbox" name="improvements" value="data-vis">Data Visualization<br>
+                    <input type="checkbox" name="improvements" value="challenges">Challenges<br>
+                    <input type="checkbox" name="improvements" value="open-source">Open Source Community<br>
+                    <input type="checkbox" name="improvements" value="gitter">Gitter help rooms<br>
+                    <input type="checkbox" name="improvements" value="videos">Videos<br>
+                    <input type="checkbox" name="improvements" value="meetups">City Meetups<br>
+                    <input type="checkbox" name="improvements" value="wiki">Wiki<br>
+                    <input type="checkbox" name="improvements" value="front-end">Forum<br>
+                    <input type="checkbox" name="improvements" value="add-courses">Additional Courses<br>
+                </div>
+                <div class="labels">
+                    <label for="comments">Any Comments or Suggestions?</label>
+                </div>
+                <div class="right-half">
+                    <textarea rows="3" cols="50" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit" id="submit">Submit</button>
                 </div>
               </form>
             </div>
